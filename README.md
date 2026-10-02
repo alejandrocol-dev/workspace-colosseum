@@ -53,6 +53,16 @@ Te dice en qué etapa estás y cuál es el próximo paso. Cada skill empieza mos
 
 **Cuánto tiempo lleva la parte de decidir:** `/idea` y `/validar` en la primera hora; `/mvp` y `/planificar` antes de escribir una línea de código.
 
+## ¿Y si no usan Devin?
+
+El kit anda igual: casi todo es markdown portable. `AGENTS.md` lo leen la mayoría de los agentes de hoy (Codex, Cursor, Gemini CLI, Jules), y `docs/` + `proyecto/` funcionan con cualquiera.
+
+Lo único específico de Devin es el directorio `.devin/skills/` y la invocación con `/`. Tres formas de llevarlo a otro agente:
+
+1. **Copiar las skills al directorio del agente:** mové `.devin/skills/` a `.claude/skills/` (Claude Code) o `.agents/skills/` (Codex y el ecosistema de `npx skills add`). El contenido funciona igual; lo que se pierde es el frontmatter de permisos (por ejemplo, que solo `/validar` pueda correr comandos — afuera queda a criterio del agente).
+2. **Apuntar al archivo:** sin copiar nada, decirle al agente "leé `.devin/skills/validar/SKILL.md` y seguilo paso a paso". Los SKILL.md son guías numeradas; cualquier LLM las sigue.
+3. **Sin agente:** las skills también sirven como checklist humano — el método (preguntas, test de mesa, veredicto) no necesita IA para funcionar.
+
 ## Qué hay en el repo
 
 ```
