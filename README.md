@@ -76,17 +76,6 @@ Instalación, autenticación (ojo: la Guía 1 muestra un método viejo — ver e
 
 Leé [`docs/guia-devin-para-construir.md`](docs/guia-devin-para-construir.md): modelos, modos, rutina de trabajo y qué evitar.
 
-## Para los organizadores
-
-- **Antes de repartirlo**, completá y verificá [`docs/contexto-hackathon.md`](docs/contexto-hackathon.md), sección "Datos a confirmar" (reglas del track, horario límite, largo de videos, elegibilidad). No dar por cierto lo que no se verificó.
-- **Chequeo de estado limpio:** `proyecto/` debe tener solo su `README.md` y la sección del proyecto en `AGENTS.md` debe estar vacía — así `/hackathon` manda a cada equipo a `/idea`. El ejemplo vive en `docs/ejemplo/`, separado a propósito.
-- **Probar las skills** (hacelo vos antes de la sede):
-  1. Abrí la carpeta en Devin y corré `/hackathon`, luego `/idea` con un equipo ficticio.
-  2. Verificá que las skills se listan: `devin skills list`.
-  3. Si querés cambiar el tono, el rigor o los criterios, editá los `SKILL.md` en `.devin/skills/`.
-- **Distribución:** subilo a GitHub como repositorio **template** (Settings, "Template repository"). Cada equipo hace "Use this template".
-- **Sobre los permisos:** las skills de brainstorm solo escriben en `proyecto/` (y `/planificar` además en `AGENTS.md`). `/validar` puede ejecutar únicamente los comandos de Colosseum Copilot (`copilot-connect` y consultas a su API). Las búsquedas web pueden pedir permiso la primera vez.
-
 ## Fuentes
 
 - Colosseum Crypto World's Fair: <https://colosseum.com/worldsfair>
