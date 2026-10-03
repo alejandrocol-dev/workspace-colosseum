@@ -8,10 +8,11 @@ Hecho para la **Colosseum Crypto World's Fair, track Superteam Argentina**, pero
 
 ## Cómo funciona
 
-Siete skills que se llaman con `/` dentro de Devin. **Hacen preguntas de a una**, cuestionan la idea y dejan el trabajo escrito en `proyecto/` (la memoria del equipo entre sesiones — cada sesión nueva de Devin arranca sin memoria).
+Siete skills que se llaman con `/` dentro de Devin (o de cualquier agente compatible: Claude Code, Codex, Cursor). **Hacen preguntas de a una**, cuestionan la idea y dejan el trabajo escrito en `proyecto/`, que es la memoria del equipo entre sesiones: cada sesión nueva del agente arranca sin memoria.
 
 ```
-     /solana-tuc-idea       qué construir
+     /solana-tuc-empezar    cómo funciona el kit
+  -> /solana-tuc-idea       qué construir
   -> /solana-tuc-validar    ¿vale la pena?
   -> /solana-tuc-mvp        qué entra en las horas
   -> /solana-tuc-planificar cómo se hace
@@ -40,33 +41,25 @@ Todo el kit trabaja sobre **devnet**, la red de prueba de Solana. La plata ahí 
 - Toda transacción que se firme o envíe pide aprobación, mostrando destino, monto, token y red.
 - Al entregar, se aclara a los jurados que el proyecto corre en devnet.
 
-## Para los participantes: arrancar en 3 pasos
+## Para los participantes: arrancar
 
-1. Instalá Devin (<https://devin.ai/desktop>) e iniciá sesión.
-2. Usá este repo como base de tu equipo: botón **Use this template** en GitHub (o clonalo) y abrí la carpeta en Devin.
-3. Abrí una sesión y escribí:
+### Opción A: instalar las skills (cualquier agente, recomendada)
 
-```
-/solana-tuc-empezar
-```
-
-Te explica cómo funciona el kit y te deja listo para `/solana-tuc-idea`. Después, en cualquier momento, `/solana-tuc-status` te dice en qué etapa están y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
-
-**Si no sabés de cripto:** el kit asume que pueden ser principiantes. Cada término (devnet, wallet, USDC, votación onchain) se explica en una línea la primera vez que aparece. Si algo no se entiende, frenen y pidan que lo explique.
-
-**Cuánto tiempo lleva la parte de decidir:** `/solana-tuc-idea` y `/solana-tuc-validar` en la primera hora; `/solana-tuc-mvp` y `/solana-tuc-planificar` antes de escribir una línea de código.
-
-## Instalar solo las skills (sin clonar el repo)
-
-Para tenerlas en cualquier carpeta y en cualquier agente compatible (Devin, Claude Code, Codex, Cursor, etc.):
+Necesitás Node.js 18 o superior. En la terminal:
 
 ```bash
 npx skills add alejandrocol-dev/workspace-colosseum -g
 ```
 
-Después abrí el agente en una carpeta vacía y escribí `/solana-tuc-empezar`. Además de explicar el kit, se fija si tenés las dos skills externas que pide la Guía oficial 1 (`solana-dev` y `colosseum-copilot`, ver más abajo) y, si falta alguna, te ofrece instalarla.
+Abrí tu agente (Devin, Claude Code, Codex, Cursor) en una carpeta vacía para el proyecto del equipo y escribí:
 
-Si preferís instalar todo de una desde la terminal:
+```
+/solana-tuc-empezar
+```
+
+Te explica cómo funciona el kit, se fija si tenés las dos skills externas que pide la Guía oficial 1 (`solana-dev` y `colosseum-copilot`) y, si falta alguna, te ofrece instalarla. Después abrí una sesión nueva y arrancá con `/solana-tuc-idea`.
+
+Si preferís dejar todo instalado desde la terminal:
 
 ```bash
 npx skills add solana-foundation/solana-dev-skill -g
@@ -74,24 +67,32 @@ npx skills add ColosseumOrg/colosseum-copilot -g
 npx skills add alejandrocol-dev/workspace-colosseum -g
 ```
 
-`-g` las instala globales; sin `-g` quedan solo en el proyecto actual. Para una sola: `--skill solana-tuc-validar`. Cada skill trae en su carpeta `references/` los docs que necesita, así que andan fuera de este repo. El trabajo se sigue guardando en `proyecto/` del directorio donde estén, y `/solana-tuc-planificar` crea el `AGENTS.md` si no existe.
+`-g` las instala globales; sin `-g` quedan solo en la carpeta actual. Para instalar una sola: `--skill solana-tuc-validar`. Cada skill trae en su carpeta `references/` los docs que necesita, así que andan fuera de este repo. El trabajo se guarda en `proyecto/` de la carpeta donde estén, y `/solana-tuc-planificar` crea el `AGENTS.md` si no existe.
 
-**Si editás `docs/` o `AGENTS.md`**, corré `./scripts/sync-references.sh` antes de commitear: copia esos archivos a las `references/` de cada skill.
+### Opción B: usar este repo como base (Devin)
 
-## ¿Y si no usan Devin?
+1. Instalá Devin (<https://devin.ai/desktop>) e iniciá sesión.
+2. Botón **Use this template** en GitHub (o clonalo) y abrí la carpeta en Devin. Las skills ya vienen en `.devin/skills/`.
+3. Abrí una sesión y escribí `/solana-tuc-empezar`.
 
-El kit anda igual: casi todo es markdown portable. `AGENTS.md` lo leen la mayoría de los agentes de hoy (Codex, Cursor, Gemini CLI, Jules), y `docs/` + `proyecto/` funcionan con cualquiera.
+### En cualquiera de las dos
 
-Lo único específico de Devin es el directorio `.devin/skills/` y la invocación con `/`. Tres formas de llevarlo a otro agente:
+En cualquier momento, `/solana-tuc-status` te dice en qué etapa están y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
 
-1. **Copiar las skills al directorio del agente:** mové `.devin/skills/` a `.claude/skills/` (Claude Code) o `.agents/skills/` (Codex y el ecosistema de `npx skills add`). El contenido funciona igual; lo que se pierde es el frontmatter de permisos (por ejemplo, que solo `/solana-tuc-validar` pueda correr comandos — afuera queda a criterio del agente).
-2. **Apuntar al archivo:** sin copiar nada, decirle al agente "leé `.devin/skills/solana-tuc-validar/SKILL.md` y seguilo paso a paso". Los SKILL.md son guías numeradas; cualquier LLM las sigue.
-3. **Sin agente:** las skills también sirven como checklist humano — el método (preguntas, test de mesa, veredicto) no necesita IA para funcionar.
+**Si no sabés de cripto:** el kit asume que pueden ser principiantes. Cada término (devnet, wallet, USDC, votación onchain) se explica en una línea la primera vez que aparece. Si algo no se entiende, frenen y pidan que lo explique.
+
+**Cuánto tiempo lleva la parte de decidir:** `/solana-tuc-idea` y `/solana-tuc-validar` en la primera hora; `/solana-tuc-mvp` y `/solana-tuc-planificar` antes de escribir una línea de código.
+
+**Sin agente:** las skills también sirven como checklist humano. El método (preguntas, test de mesa, veredicto) no necesita IA para funcionar.
+
+## Para quien mantiene el kit
+
+`docs/` y `AGENTS.md` son la fuente. Si los editás, corré `./scripts/sync-references.sh` antes de commitear: copia esos archivos a las `references/` de cada skill, que es lo que se instala con `npx skills`.
 
 ## Qué hay en el repo
 
 ```
-.devin/skills/       las skills (hackathon, idea, validar, mvp, planificar, pitch)
+.devin/skills/       las 7 skills solana-tuc-*, cada una con su references/
 scripts/             sync-references.sh: copia docs/ a las references/ de cada skill
 docs/                reglas y fechas, proyectos ganadores de referencia, guía de Devin, skills externas
 docs/ejemplo/        un proyecto completo de ejemplo (solo para mirar, NO es el tuyo)
@@ -104,7 +105,7 @@ AGENTS.md            instrucciones permanentes para Devin (/solana-tuc-planifica
 La guía de setup de la sede ya les pide instalar dos skills que el kit aprovecha si están:
 
 - **`colosseum-copilot`** → `/solana-tuc-validar` la usa para ver qué ya se hizo en 5.400+ entregas pasadas, y `/solana-tuc-pitch` para pedir feedback. Si no está instalada o falla el login, `/solana-tuc-validar` tiene plan B manual.
-- **`solana-dev-skill`** → se activa sola al escribir código Solana con las librerías actuales.
+- **`solana-dev`** → se activa sola al escribir código Solana con las librerías actuales.
 
 Instalación, autenticación (ojo: la Guía 1 muestra un método viejo — ver el doc), troubleshooting y reglas de seguridad en [`docs/skills-externas.md`](docs/skills-externas.md).
 
