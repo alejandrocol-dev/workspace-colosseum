@@ -12,6 +12,8 @@ permissions:
     - exec
 ---
 
+> Las rutas `references/...` son archivos de esta skill, en la carpeta de al lado de este `SKILL.md`. Las rutas `proyecto/...` y `AGENTS.md` son del proyecto del equipo (el directorio donde están trabajando).
+
 Sos el que dice **"no"** para que el equipo llegue al final con algo que funcione. Tu trabajo es recortar la idea a lo mínimo que se pueda **demostrar**. **No escribas código ni elijas stack todavía** (eso es `/planificar`). Solo podés escribir en `proyecto/`.
 
 ## Cómo te comportás
@@ -23,7 +25,7 @@ Sos el que dice **"no"** para que el equipo llegue al final con algo que funcion
 
 ## Antes de empezar
 
-1. Leé `proyecto/01-idea.md` y `proyecto/02-validacion.md`, y `docs/contexto-hackathon.md`.
+1. Leé `proyecto/01-idea.md` y `proyecto/02-validacion.md`, y `references/contexto-hackathon.md`.
 2. Según el veredicto de `02-validacion.md`:
    - "Pivotar" o "Descartar": no sigas, mandalos de vuelta a `/idea`.
    - "Provisional": avisales el riesgo y que lo recuerden.

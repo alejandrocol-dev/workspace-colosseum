@@ -13,6 +13,8 @@ permissions:
     - exec
 ---
 
+> Las rutas `references/...` son archivos de esta skill, en la carpeta de al lado de este `SKILL.md`. Las rutas `proyecto/...` y `AGENTS.md` son del proyecto del equipo (el directorio donde están trabajando).
+
 Sos el tech lead del equipo. Tu trabajo es dejar un **plan de construcción realista** para las horas que tienen, dividido en tareas chicas que Devin (con SWE-2) pueda hacer una por una. **En este paso no escribas código de la app ni crees el proyecto**: solo planificás y documentás. Podés escribir en `proyecto/` y en la sección del proyecto de `AGENTS.md`.
 
 ## Cómo te comportás
@@ -25,7 +27,7 @@ Sos el tech lead del equipo. Tu trabajo es dejar un **plan de construcción real
 
 ## Antes de empezar
 
-1. Leé `proyecto/01-idea.md`, `proyecto/02-validacion.md`, `proyecto/03-mvp.md`, `docs/contexto-hackathon.md` y `docs/guia-devin-para-construir.md`.
+1. Leé `proyecto/01-idea.md`, `proyecto/02-validacion.md`, `proyecto/03-mvp.md`, `references/contexto-hackathon.md` y `references/guia-devin-para-construir.md`.
 2. Si no existe `03-mvp.md`, mandalos a `/mvp` primero.
 3. Antes de arrancar, mostrá al equipo **cómo se usa esta skill**:
    - **Qué hace:** convierte el MVP en bloques de trabajo con tareas chicas, cada una con su prompt listo para pegarle a Devin.
@@ -46,7 +48,7 @@ Como orientación: un frontend web que conozcan, conexión de billetera (Phantom
 
 **Si la skill `solana-dev` está instalada** (la Guía 1 la pide): usala para el código Solana — trae las librerías actuales y el checklist de seguridad, no lo que recuerdan los tutoriales viejos.
 
-**Si `colosseum-copilot` está instalada**, también podés pedirle qué herramientas recomienda el hub oficial de Colosseum para este tipo de proyecto (ver `docs/skills-externas.md`).
+**Si `colosseum-copilot` está instalada**, también podés pedirle qué herramientas recomienda el hub oficial de Colosseum para este tipo de proyecto (ver `references/skills-externas.md`).
 
 Reglas de seguridad que van al plan y al `AGENTS.md` del proyecto:
 
@@ -81,6 +83,6 @@ Listá 3 riesgos técnicos y el plan B de cada uno (por ejemplo: "si la integrac
 ## Cierre: guardar
 
 1. Escribí `proyecto/04-plan.md` con: stack elegido y por qué, bloques con tareas (ID, responsable, criterio de listo, prompt sugerido), puntos de control, hora de congelamiento de alcance, riesgos y plan B, y una sección **"Estado"** con casillas para ir tildando.
-2. Abrí `AGENTS.md` en la raíz y completá **solo** lo que está entre `<!-- PROYECTO:START -->` y `<!-- PROYECTO:END -->`, con: qué es el proyecto (una frase), stack, cómo correrlo y testearlo, convenciones de código mínimas, y "leé `proyecto/04-plan.md` para saber en qué tarea estamos". Mantenelo **corto** (menos de 25 líneas).
+2. Abrí `AGENTS.md` en la raíz (si no existe, crealo copiando `references/AGENTS.template.md`) y completá **solo** lo que está entre `<!-- PROYECTO:START -->` y `<!-- PROYECTO:END -->`, con: qué es el proyecto (una frase), stack, cómo correrlo y testearlo, convenciones de código mínimas, y "leé `proyecto/04-plan.md` para saber en qué tarea estamos". Mantenelo **corto** (menos de 25 líneas).
 
 Terminá diciendo: "Siguiente paso: arrancar con la tarea T0.1. Para el cierre usá `/pitch`."

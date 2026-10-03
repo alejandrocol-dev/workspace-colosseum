@@ -53,6 +53,18 @@ Te dice en qué etapa estás y cuál es el próximo paso. Cada skill empieza mos
 
 **Cuánto tiempo lleva la parte de decidir:** `/idea` y `/validar` en la primera hora; `/mvp` y `/planificar` antes de escribir una línea de código.
 
+## Instalar solo las skills (sin clonar el repo)
+
+Para tenerlas en cualquier carpeta y en cualquier agente compatible (Devin, Claude Code, Codex, Cursor, etc.):
+
+```bash
+npx skills add alejandrocol-dev/workspace-colosseum -g
+```
+
+`-g` las instala globales; sin `-g` quedan solo en el proyecto actual. Para una sola: `--skill validar`. Cada skill trae en su carpeta `references/` los docs que necesita, así que andan fuera de este repo. El trabajo se sigue guardando en `proyecto/` del directorio donde estén, y `/planificar` crea el `AGENTS.md` si no existe.
+
+**Si editás `docs/` o `AGENTS.md`**, corré `./scripts/sync-references.sh` antes de commitear: copia esos archivos a las `references/` de cada skill.
+
 ## ¿Y si no usan Devin?
 
 El kit anda igual: casi todo es markdown portable. `AGENTS.md` lo leen la mayoría de los agentes de hoy (Codex, Cursor, Gemini CLI, Jules), y `docs/` + `proyecto/` funcionan con cualquiera.
@@ -67,6 +79,7 @@ Lo único específico de Devin es el directorio `.devin/skills/` y la invocació
 
 ```
 .devin/skills/       las skills (hackathon, idea, validar, mvp, planificar, pitch)
+scripts/             sync-references.sh: copia docs/ a las references/ de cada skill
 docs/                reglas y fechas, proyectos ganadores de referencia, guía de Devin, skills externas
 docs/ejemplo/        un proyecto completo de ejemplo (solo para mirar, NO es el tuyo)
 proyecto/            la memoria del equipo: arranca vacía, la llenan las skills
