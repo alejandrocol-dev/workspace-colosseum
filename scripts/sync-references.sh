@@ -13,11 +13,11 @@ sync() { # sync <skill> <archivo en docs/>...
   for f in "$@"; do cp -R "docs/$f" "$S/$skill/references/"; done
 }
 
-sync hackathon  contexto-hackathon.md ejemplo
-sync empezar    contexto-hackathon.md skills-externas.md
-sync idea       contexto-hackathon.md referencias-ganadores.md
-sync validar    contexto-hackathon.md referencias-ganadores.md skills-externas.md
-sync mvp        contexto-hackathon.md
-sync planificar contexto-hackathon.md guia-devin-para-construir.md skills-externas.md
-sync pitch      contexto-hackathon.md referencias-ganadores.md skills-externas.md
-cp AGENTS.md "$S/planificar/references/AGENTS.template.md"
+sync solana-tuc-hackathon  contexto-hackathon.md ejemplo
+sync solana-tuc-empezar    contexto-hackathon.md skills-externas.md
+sync solana-tuc-idea       contexto-hackathon.md referencias-ganadores.md
+sync solana-tuc-validar    contexto-hackathon.md referencias-ganadores.md skills-externas.md
+sync solana-tuc-mvp        contexto-hackathon.md
+sync solana-tuc-planificar contexto-hackathon.md guia-devin-para-construir.md skills-externas.md
+sync solana-tuc-pitch      contexto-hackathon.md referencias-ganadores.md skills-externas.md
+cp AGENTS.md "$S/solana-tuc-planificar/references/AGENTS.template.md"

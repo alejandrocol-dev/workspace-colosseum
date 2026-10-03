@@ -11,23 +11,25 @@ Hecho para la **Colosseum Crypto World's Fair, track Superteam Argentina**, pero
 Siete skills que se llaman con `/` dentro de Devin. **Hacen preguntas de a una**, cuestionan la idea y dejan el trabajo escrito en `proyecto/` (la memoria del equipo entre sesiones — cada sesión nueva de Devin arranca sin memoria).
 
 ```
-/idea  ->  /validar  ->  /mvp  ->  /planificar  ->  (construir)  ->  /pitch
- qué        ¿vale la     qué entra   cómo se                  cómo se
-construir    pena?       en las      hace                     cuenta
-                         horas
+     /solana-tuc-idea       qué construir
+  -> /solana-tuc-validar    ¿vale la pena?
+  -> /solana-tuc-mvp        qué entra en las horas
+  -> /solana-tuc-planificar cómo se hace
+  -> (construir)
+  -> /solana-tuc-pitch      cómo se cuenta
 ```
 
 | Skill | Qué hace | Archivo que deja |
 |---|---|---|
-| `/empezar` | Explica cómo funciona todo el kit antes de arrancar (etapas, skills, reglas) | (no escribe) |
-| `/hackathon` | Te ubica en el proceso y te dice el próximo paso | (no escribe) |
-| `/idea` | Brainstorm guiado: equipo, problemas, ideas, filtro, elección | `proyecto/01-idea.md` |
-| `/validar` | Investiga qué ya existe (con Colosseum Copilot si está instalada), ataca la idea y da un veredicto | `proyecto/02-validacion.md` |
-| `/mvp` | Recorta a 3 funciones y define la demo de 3 minutos | `proyecto/03-mvp.md` |
-| `/planificar` | Bloques de trabajo con tareas listas para pedirle a Devin; arma el `AGENTS.md` | `proyecto/04-plan.md` |
-| `/pitch` | Deck, guiones de video en inglés y checklist de entrega | `proyecto/05-pitch.md` |
+| `/solana-tuc-empezar` | Explica cómo funciona todo el kit antes de arrancar (etapas, skills, reglas) | (no escribe) |
+| `/solana-tuc-hackathon` | Te ubica en el proceso y te dice el próximo paso | (no escribe) |
+| `/solana-tuc-idea` | Brainstorm guiado: equipo, problemas, ideas, filtro, elección | `proyecto/01-idea.md` |
+| `/solana-tuc-validar` | Investiga qué ya existe (con Colosseum Copilot si está instalada), ataca la idea y da un veredicto | `proyecto/02-validacion.md` |
+| `/solana-tuc-mvp` | Recorta a 3 funciones y define la demo de 3 minutos | `proyecto/03-mvp.md` |
+| `/solana-tuc-planificar` | Bloques de trabajo con tareas listas para pedirle a Devin; arma el `AGENTS.md` | `proyecto/04-plan.md` |
+| `/solana-tuc-pitch` | Deck, guiones de video en inglés y checklist de entrega | `proyecto/05-pitch.md` |
 
-Si la investigación dice que la idea es floja, `/validar` no te manda a descartar a ciegas: te da un menú (angostar a la cuña, pivotar, clon consciente, descartar o veredicto provisional) según el patrón de mercado que encontró.
+Si la investigación dice que la idea es floja, `/solana-tuc-validar` no te manda a descartar a ciegas: te da un menú (angostar a la cuña, pivotar, clon consciente, descartar o veredicto provisional) según el patrón de mercado que encontró.
 
 ## Regla de oro: modo prueba, siempre
 
@@ -45,14 +47,14 @@ Todo el kit trabaja sobre **devnet**, la red de prueba de Solana. La plata ahí 
 3. Abrí una sesión y escribí:
 
 ```
-/empezar
+/solana-tuc-empezar
 ```
 
-Te explica cómo funciona el kit y te deja listo para `/idea`. Después, en cualquier momento, `/hackathon` te dice en qué etapa están y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
+Te explica cómo funciona el kit y te deja listo para `/solana-tuc-idea`. Después, en cualquier momento, `/solana-tuc-hackathon` te dice en qué etapa están y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
 
 **Si no sabés de cripto:** el kit asume que pueden ser principiantes. Cada término (devnet, wallet, USDC, votación onchain) se explica en una línea la primera vez que aparece. Si algo no se entiende, frenen y pidan que lo explique.
 
-**Cuánto tiempo lleva la parte de decidir:** `/idea` y `/validar` en la primera hora; `/mvp` y `/planificar` antes de escribir una línea de código.
+**Cuánto tiempo lleva la parte de decidir:** `/solana-tuc-idea` y `/solana-tuc-validar` en la primera hora; `/solana-tuc-mvp` y `/solana-tuc-planificar` antes de escribir una línea de código.
 
 ## Instalar solo las skills (sin clonar el repo)
 
@@ -64,9 +66,9 @@ npx skills add ColosseumOrg/colosseum-copilot -g
 npx skills add alejandrocol-dev/workspace-colosseum -g
 ```
 
-Las dos primeras son las skills externas que pide la Guía oficial 1 y que el kit aprovecha (ver más abajo); la tercera es este kit. Después abrí el agente en una carpeta vacía y escribí `/empezar`.
+Las dos primeras son las skills externas que pide la Guía oficial 1 y que el kit aprovecha (ver más abajo); la tercera es este kit. Después abrí el agente en una carpeta vacía y escribí `/solana-tuc-empezar`.
 
-`-g` las instala globales; sin `-g` quedan solo en el proyecto actual. Para una sola: `--skill validar`. Cada skill trae en su carpeta `references/` los docs que necesita, así que andan fuera de este repo. El trabajo se sigue guardando en `proyecto/` del directorio donde estén, y `/planificar` crea el `AGENTS.md` si no existe.
+`-g` las instala globales; sin `-g` quedan solo en el proyecto actual. Para una sola: `--skill solana-tuc-validar`. Cada skill trae en su carpeta `references/` los docs que necesita, así que andan fuera de este repo. El trabajo se sigue guardando en `proyecto/` del directorio donde estén, y `/solana-tuc-planificar` crea el `AGENTS.md` si no existe.
 
 **Si editás `docs/` o `AGENTS.md`**, corré `./scripts/sync-references.sh` antes de commitear: copia esos archivos a las `references/` de cada skill.
 
@@ -76,8 +78,8 @@ El kit anda igual: casi todo es markdown portable. `AGENTS.md` lo leen la mayor�
 
 Lo único específico de Devin es el directorio `.devin/skills/` y la invocación con `/`. Tres formas de llevarlo a otro agente:
 
-1. **Copiar las skills al directorio del agente:** mové `.devin/skills/` a `.claude/skills/` (Claude Code) o `.agents/skills/` (Codex y el ecosistema de `npx skills add`). El contenido funciona igual; lo que se pierde es el frontmatter de permisos (por ejemplo, que solo `/validar` pueda correr comandos — afuera queda a criterio del agente).
-2. **Apuntar al archivo:** sin copiar nada, decirle al agente "leé `.devin/skills/validar/SKILL.md` y seguilo paso a paso". Los SKILL.md son guías numeradas; cualquier LLM las sigue.
+1. **Copiar las skills al directorio del agente:** mové `.devin/skills/` a `.claude/skills/` (Claude Code) o `.agents/skills/` (Codex y el ecosistema de `npx skills add`). El contenido funciona igual; lo que se pierde es el frontmatter de permisos (por ejemplo, que solo `/solana-tuc-validar` pueda correr comandos — afuera queda a criterio del agente).
+2. **Apuntar al archivo:** sin copiar nada, decirle al agente "leé `.devin/skills/solana-tuc-validar/SKILL.md` y seguilo paso a paso". Los SKILL.md son guías numeradas; cualquier LLM las sigue.
 3. **Sin agente:** las skills también sirven como checklist humano — el método (preguntas, test de mesa, veredicto) no necesita IA para funcionar.
 
 ## Qué hay en el repo
@@ -88,14 +90,14 @@ scripts/             sync-references.sh: copia docs/ a las references/ de cada s
 docs/                reglas y fechas, proyectos ganadores de referencia, guía de Devin, skills externas
 docs/ejemplo/        un proyecto completo de ejemplo (solo para mirar, NO es el tuyo)
 proyecto/            la memoria del equipo: arranca vacía, la llenan las skills
-AGENTS.md            instrucciones permanentes para Devin (/planificar completa la sección del proyecto)
+AGENTS.md            instrucciones permanentes para Devin (/solana-tuc-planificar completa la sección del proyecto)
 ```
 
 ## Skills externas (las pide la Guía oficial 1)
 
 La guía de setup de la sede ya les pide instalar dos skills que el kit aprovecha si están:
 
-- **`colosseum-copilot`** → `/validar` la usa para ver qué ya se hizo en 5.400+ entregas pasadas, y `/pitch` para pedir feedback. Si no está instalada o falla el login, `/validar` tiene plan B manual.
+- **`colosseum-copilot`** → `/solana-tuc-validar` la usa para ver qué ya se hizo en 5.400+ entregas pasadas, y `/solana-tuc-pitch` para pedir feedback. Si no está instalada o falla el login, `/solana-tuc-validar` tiene plan B manual.
 - **`solana-dev-skill`** → se activa sola al escribir código Solana con las librerías actuales.
 
 Instalación, autenticación (ojo: la Guía 1 muestra un método viejo — ver el doc), troubleshooting y reglas de seguridad en [`docs/skills-externas.md`](docs/skills-externas.md).
