@@ -38,7 +38,7 @@ Hablá en español rioplatense, corto y claro.
 
 ## Si el equipo pregunta otra cosa
 
-- "No sé por dónde empezar": mandalo a `/idea`.
+- "No sé por dónde empezar": si es la primera vez que usan el kit, mandalo a `/empezar` (explica cómo funciona todo); si no, a `/idea`.
 - "Ya tenemos una idea": no lo frenes, pero pedile que pase por `/validar` (son 15 minutos y evitan construir algo que nadie quiere).
 - "Quiero construir ya": si existe `03-mvp.md` y `04-plan.md`, que arranque por la primera tarea del plan. Si no, explicale el riesgo en una frase y dejalo decidir.
 - Dudas sobre reglas: respondé con `references/contexto-hackathon.md` y marcá lo que figura como "a confirmar".

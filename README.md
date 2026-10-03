@@ -8,7 +8,7 @@ Hecho para la **Colosseum Crypto World's Fair, track Superteam Argentina**, pero
 
 ## Cómo funciona
 
-Seis skills que se llaman con `/` dentro de Devin. **Hacen preguntas de a una**, cuestionan la idea y dejan el trabajo escrito en `proyecto/` (la memoria del equipo entre sesiones — cada sesión nueva de Devin arranca sin memoria).
+Siete skills que se llaman con `/` dentro de Devin. **Hacen preguntas de a una**, cuestionan la idea y dejan el trabajo escrito en `proyecto/` (la memoria del equipo entre sesiones — cada sesión nueva de Devin arranca sin memoria).
 
 ```
 /idea  ->  /validar  ->  /mvp  ->  /planificar  ->  (construir)  ->  /pitch
@@ -19,6 +19,7 @@ construir    pena?       en las      hace                     cuenta
 
 | Skill | Qué hace | Archivo que deja |
 |---|---|---|
+| `/empezar` | Explica cómo funciona todo el kit antes de arrancar (etapas, skills, reglas) | (no escribe) |
 | `/hackathon` | Te ubica en el proceso y te dice el próximo paso | (no escribe) |
 | `/idea` | Brainstorm guiado: equipo, problemas, ideas, filtro, elección | `proyecto/01-idea.md` |
 | `/validar` | Investiga qué ya existe (con Colosseum Copilot si está instalada), ataca la idea y da un veredicto | `proyecto/02-validacion.md` |
@@ -44,10 +45,10 @@ Todo el kit trabaja sobre **devnet**, la red de prueba de Solana. La plata ahí 
 3. Abrí una sesión y escribí:
 
 ```
-/hackathon
+/empezar
 ```
 
-Te dice en qué etapa estás y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
+Te explica cómo funciona el kit y te deja listo para `/idea`. Después, en cualquier momento, `/hackathon` te dice en qué etapa están y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
 
 **Si no sabés de cripto:** el kit asume que pueden ser principiantes. Cada término (devnet, wallet, USDC, votación onchain) se explica en una línea la primera vez que aparece. Si algo no se entiende, frenen y pidan que lo explique.
 
@@ -58,8 +59,12 @@ Te dice en qué etapa estás y cuál es el próximo paso. Cada skill empieza mos
 Para tenerlas en cualquier carpeta y en cualquier agente compatible (Devin, Claude Code, Codex, Cursor, etc.):
 
 ```bash
+npx skills add solana-foundation/solana-dev-skill -g
+npx skills add ColosseumOrg/colosseum-copilot -g
 npx skills add alejandrocol-dev/workspace-colosseum -g
 ```
+
+Las dos primeras son las skills externas que pide la Guía oficial 1 y que el kit aprovecha (ver más abajo); la tercera es este kit. Después abrí el agente en una carpeta vacía y escribí `/empezar`.
 
 `-g` las instala globales; sin `-g` quedan solo en el proyecto actual. Para una sola: `--skill validar`. Cada skill trae en su carpeta `references/` los docs que necesita, así que andan fuera de este repo. El trabajo se sigue guardando en `proyecto/` del directorio donde estén, y `/planificar` crea el `AGENTS.md` si no existe.
 

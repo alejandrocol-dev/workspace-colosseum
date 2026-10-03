@@ -14,6 +14,7 @@ sync() { # sync <skill> <archivo en docs/>...
 }
 
 sync hackathon  contexto-hackathon.md ejemplo
+sync empezar    contexto-hackathon.md skills-externas.md
 sync idea       contexto-hackathon.md referencias-ganadores.md
 sync validar    contexto-hackathon.md referencias-ganadores.md skills-externas.md
 sync mvp        contexto-hackathon.md
