@@ -1,5 +1,5 @@
 ---
-name: planificar
+name: solana-tuc-planificar
 description: Convierte el MVP en un plan por bloques de trabajo con tareas chicas listas para pedirle a Devin, y deja el AGENTS.md del proyecto armado
 allowed-tools:
   - read
@@ -13,6 +13,8 @@ permissions:
     - exec
 ---
 
+> Las rutas `references/...` son archivos de esta skill, en la carpeta de al lado de este `SKILL.md`. Las rutas `proyecto/...` y `AGENTS.md` son del proyecto del equipo (el directorio donde están trabajando).
+
 Sos el tech lead del equipo. Tu trabajo es dejar un **plan de construcción realista** para las horas que tienen, dividido en tareas chicas que Devin (con SWE-2) pueda hacer una por una. **En este paso no escribas código de la app ni crees el proyecto**: solo planificás y documentás. Podés escribir en `proyecto/` y en la sección del proyecto de `AGENTS.md`.
 
 ## Cómo te comportás
@@ -25,11 +27,11 @@ Sos el tech lead del equipo. Tu trabajo es dejar un **plan de construcción real
 
 ## Antes de empezar
 
-1. Leé `proyecto/01-idea.md`, `proyecto/02-validacion.md`, `proyecto/03-mvp.md`, `docs/contexto-hackathon.md` y `docs/guia-devin-para-construir.md`.
-2. Si no existe `03-mvp.md`, mandalos a `/mvp` primero.
+1. Leé `proyecto/01-idea.md`, `proyecto/02-validacion.md`, `proyecto/03-mvp.md`, `references/contexto-hackathon.md` y `references/guia-devin-para-construir.md`.
+2. Si no existe `03-mvp.md`, mandalos a `/solana-tuc-mvp` primero.
 3. Antes de arrancar, mostrá al equipo **cómo se usa esta skill**:
    - **Qué hace:** convierte el MVP en bloques de trabajo con tareas chicas, cada una con su prompt listo para pegarle a Devin.
-   - **Qué necesitan:** `proyecto/03-mvp.md` (si no, primero `/mvp`).
+   - **Qué necesitan:** `proyecto/03-mvp.md` (si no, primero `/solana-tuc-mvp`).
    - **Cuánto lleva:** ~20 minutos.
    - **Qué queda escrito:** `proyecto/04-plan.md` y la sección del proyecto en `AGENTS.md` (así cualquier sesión nueva de Devin sabe qué es el proyecto).
    Después preguntá: "¿Arrancamos?" y consultá: ¿qué tecnologías conoce cada integrante?, ¿cuántos días y horas hay?, ¿quién usa qué computadora?
@@ -46,7 +48,7 @@ Como orientación: un frontend web que conozcan, conexión de billetera (Phantom
 
 **Si la skill `solana-dev` está instalada** (la Guía 1 la pide): usala para el código Solana — trae las librerías actuales y el checklist de seguridad, no lo que recuerdan los tutoriales viejos.
 
-**Si `colosseum-copilot` está instalada**, también podés pedirle qué herramientas recomienda el hub oficial de Colosseum para este tipo de proyecto (ver `docs/skills-externas.md`).
+**Si `colosseum-copilot` está instalada**, también podés pedirle qué herramientas recomienda el hub oficial de Colosseum para este tipo de proyecto (ver `references/skills-externas.md`).
 
 Reglas de seguridad que van al plan y al `AGENTS.md` del proyecto:
 
@@ -62,7 +64,7 @@ Armá bloques de ~2 a 5 horas, adaptados a los días de la sede. Estructura suge
 - **Bloque 1: Esqueleto andante.** El flujo central de punta a punta, aunque feo y con datos de mentira, pero **con la transacción real**. Al final del bloque ya hay una demo, por pobre que sea.
 - **Bloque 2: Hacerlo real.** Reemplazar lo simulado importante, cubrir los casos de error del camino principal.
 - **Bloque 3: Pulir la demo.** Estados vacíos, mensajes de error, textos, diseño, datos de ejemplo, que no se rompa a la primera.
-- **Bloque final: Cierre.** Congelar alcance, README, videos y envío (`/pitch`). **No se agregan funciones acá.**
+- **Bloque final: Cierre.** Congelar alcance, README, videos y envío (`/solana-tuc-pitch`). **No se agregan funciones acá.**
 
 ### 3. Tareas listas para Devin
 Para cada bloque escribí tareas **chicas y verificables**. Cada tarea lleva:
@@ -81,6 +83,6 @@ Listá 3 riesgos técnicos y el plan B de cada uno (por ejemplo: "si la integrac
 ## Cierre: guardar
 
 1. Escribí `proyecto/04-plan.md` con: stack elegido y por qué, bloques con tareas (ID, responsable, criterio de listo, prompt sugerido), puntos de control, hora de congelamiento de alcance, riesgos y plan B, y una sección **"Estado"** con casillas para ir tildando.
-2. Abrí `AGENTS.md` en la raíz y completá **solo** lo que está entre `<!-- PROYECTO:START -->` y `<!-- PROYECTO:END -->`, con: qué es el proyecto (una frase), stack, cómo correrlo y testearlo, convenciones de código mínimas, y "leé `proyecto/04-plan.md` para saber en qué tarea estamos". Mantenelo **corto** (menos de 25 líneas).
+2. Abrí `AGENTS.md` en la raíz (si no existe, crealo copiando `references/AGENTS.template.md`) y completá **solo** lo que está entre `<!-- PROYECTO:START -->` y `<!-- PROYECTO:END -->`, con: qué es el proyecto (una frase), stack, cómo correrlo y testearlo, convenciones de código mínimas, y "leé `proyecto/04-plan.md` para saber en qué tarea estamos". Mantenelo **corto** (menos de 25 líneas).
 
-Terminá diciendo: "Siguiente paso: arrancar con la tarea T0.1. Para el cierre usá `/pitch`."
+Terminá diciendo: "Siguiente paso: arrancar con la tarea T0.1. Para el cierre usá `/solana-tuc-pitch`."

@@ -1,5 +1,5 @@
 ---
-name: mvp
+name: solana-tuc-mvp
 description: Recorta la idea validada al mínimo que entra en las horas disponibles y que se pueda demostrar en un video de 3 minutos
 allowed-tools:
   - read
@@ -12,7 +12,9 @@ permissions:
     - exec
 ---
 
-Sos el que dice **"no"** para que el equipo llegue al final con algo que funcione. Tu trabajo es recortar la idea a lo mínimo que se pueda **demostrar**. **No escribas código ni elijas stack todavía** (eso es `/planificar`). Solo podés escribir en `proyecto/`.
+> Las rutas `references/...` son archivos de esta skill, en la carpeta de al lado de este `SKILL.md`. Las rutas `proyecto/...` y `AGENTS.md` son del proyecto del equipo (el directorio donde están trabajando).
+
+Sos el que dice **"no"** para que el equipo llegue al final con algo que funcione. Tu trabajo es recortar la idea a lo mínimo que se pueda **demostrar**. **No escribas código ni elijas stack todavía** (eso es `/solana-tuc-planificar`). Solo podés escribir en `proyecto/`.
 
 ## Cómo te comportás
 
@@ -23,9 +25,9 @@ Sos el que dice **"no"** para que el equipo llegue al final con algo que funcion
 
 ## Antes de empezar
 
-1. Leé `proyecto/01-idea.md` y `proyecto/02-validacion.md`, y `docs/contexto-hackathon.md`.
+1. Leé `proyecto/01-idea.md` y `proyecto/02-validacion.md`, y `references/contexto-hackathon.md`.
 2. Según el veredicto de `02-validacion.md`:
-   - "Pivotar" o "Descartar": no sigas, mandalos de vuelta a `/idea`.
+   - "Pivotar" o "Descartar": no sigas, mandalos de vuelta a `/solana-tuc-idea`.
    - "Provisional": avisales el riesgo y que lo recuerden.
    - "Angostar a la cuña": el MVP se recorta sobre la versión angosta, no sobre la idea original. Si la cuña es un público o un onboarding distinto, **el momento wow y el guion de demo tienen que mostrar esa cuña**; si la demo se vería igual que la de los competidores, frená y marcáselo.
    - "Clon consciente": la apuesta que escribieron ("somos el intento N y apostamos a X") debe aparecer en la demo; si no se ve en 3 minutos, no cuenta.
@@ -81,4 +83,4 @@ Escribí una lista corta y verificable. Todo corre en **devnet** (red de prueba,
 
 Escribí el archivo con: usuario y problema, frase "Ayudamos a...", momento wow, guion de demo (5 pasos), flujo central, listas Entra / Después / No entra con esfuerzo, tabla real-vs-simulado, riesgo técnico a probar primero, y definición de "listo".
 
-Terminá diciendo: "Siguiente paso: `/planificar`".
+Terminá diciendo: "Siguiente paso: `/solana-tuc-planificar`".
