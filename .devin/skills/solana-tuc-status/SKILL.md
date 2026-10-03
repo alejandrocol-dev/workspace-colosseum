@@ -1,5 +1,5 @@
 ---
-name: solana-tuc-hackathon
+name: solana-tuc-status
 description: Guía del proceso. Te dice en qué etapa está tu equipo y cuál es el próximo paso
 allowed-tools:
   - read

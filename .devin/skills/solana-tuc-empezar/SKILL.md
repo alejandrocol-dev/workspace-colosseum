@@ -39,7 +39,7 @@ Hablá en español rioplatense, corto y claro. El equipo puede ser principiante 
 | `/solana-tuc-mvp` | Recortar a lo que entra en las horas y se puede mostrar en 3 minutos | ~20 min | `proyecto/03-mvp.md` |
 | `/solana-tuc-planificar` | Dividir en tareas chicas listas para pedirle al agente | ~20 min | `proyecto/04-plan.md` y `AGENTS.md` |
 | `/solana-tuc-pitch` | Deck, guion del video demo (en inglés) y checklist de entrega | ~30 min | `proyecto/05-pitch.md` |
-| `/solana-tuc-hackathon` | En cualquier momento: dice en qué etapa están y el próximo paso | 1 min | nada |
+| `/solana-tuc-status` | En cualquier momento: dice en qué etapa están y el próximo paso | 1 min | nada |
 
 4. Explicá cómo trabajan las skills:
    - Preguntan **de a una cosa** y cuestionan la idea; no aplauden por reflejo.
@@ -63,7 +63,7 @@ npx skills add ColosseumOrg/colosseum-copilot -g -y
    - No se inventan usuarios, métricas ni competidores.
    - La entrega final va en inglés.
 7. Recordales la fecha límite (de `references/contexto-hackathon.md`) y que la comparen con la fecha de hoy.
-8. Si en `proyecto/` ya hay archivos, decí que ya arrancaron y mandalos a `/solana-tuc-hackathon` para ver dónde están. Si no, cerrá con: "¿Arrancamos con `/solana-tuc-idea`?"
+8. Si en `proyecto/` ya hay archivos, decí que ya arrancaron y mandalos a `/solana-tuc-status` para ver dónde están. Si no, cerrá con: "¿Arrancamos con `/solana-tuc-idea`?"
 
 ## Si preguntan otra cosa
 

@@ -21,7 +21,7 @@ Como no hay que ahorrar tokens: pedí 2 o 3 variantes de una pantalla, pedí tes
 
 ## Rutina de trabajo
 
-1. Abrí sesión y escribí `/solana-tuc-hackathon` si no sabés dónde estás.
+1. Abrí sesión y escribí `/solana-tuc-status` si no sabés dónde estás.
 2. Pedí **una tarea chica por vez** (idealmente la de `proyecto/04-plan.md`). "Hacé login con wallet" es mejor que "hacé la app".
 3. Pasale contexto con `@archivo` y, para bugs de UI, pegá una captura con `Ctrl+V`.
 4. Probalo vos. Mirá la pantalla. No confíes en "ya está listo".

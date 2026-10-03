@@ -22,7 +22,7 @@ Siete skills que se llaman con `/` dentro de Devin. **Hacen preguntas de a una**
 | Skill | Qué hace | Archivo que deja |
 |---|---|---|
 | `/solana-tuc-empezar` | Explica cómo funciona todo el kit antes de arrancar (etapas, skills, reglas) e instala las skills externas que falten | (no escribe) |
-| `/solana-tuc-hackathon` | Te ubica en el proceso y te dice el próximo paso | (no escribe) |
+| `/solana-tuc-status` | Te ubica en el proceso y te dice el próximo paso | (no escribe) |
 | `/solana-tuc-idea` | Brainstorm guiado: equipo, problemas, ideas, filtro, elección | `proyecto/01-idea.md` |
 | `/solana-tuc-validar` | Investiga qué ya existe (con Colosseum Copilot si está instalada), ataca la idea y da un veredicto | `proyecto/02-validacion.md` |
 | `/solana-tuc-mvp` | Recorta a 3 funciones y define la demo de 3 minutos | `proyecto/03-mvp.md` |
@@ -50,7 +50,7 @@ Todo el kit trabaja sobre **devnet**, la red de prueba de Solana. La plata ahí 
 /solana-tuc-empezar
 ```
 
-Te explica cómo funciona el kit y te deja listo para `/solana-tuc-idea`. Después, en cualquier momento, `/solana-tuc-hackathon` te dice en qué etapa están y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
+Te explica cómo funciona el kit y te deja listo para `/solana-tuc-idea`. Después, en cualquier momento, `/solana-tuc-status` te dice en qué etapa están y cuál es el próximo paso. Cada skill empieza mostrando su propia guía (qué hace, qué necesitás, cuánto lleva y qué archivo deja) antes de preguntar si arrancan.
 
 **Si no sabés de cripto:** el kit asume que pueden ser principiantes. Cada término (devnet, wallet, USDC, votación onchain) se explica en una línea la primera vez que aparece. Si algo no se entiende, frenen y pidan que lo explique.
 
