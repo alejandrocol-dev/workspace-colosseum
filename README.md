@@ -8,7 +8,7 @@ Hecho para la **Colosseum Crypto World's Fair, track Superteam Argentina**, pero
 
 ## Cómo funciona
 
-Siete skills que se llaman con `/` dentro de Devin (o de cualquier agente compatible: Claude Code, Codex, Cursor). **Hacen preguntas de a una**, cuestionan la idea y dejan el trabajo escrito en `proyecto/`, que es la memoria del equipo entre sesiones: cada sesión nueva del agente arranca sin memoria.
+Siete skills que se llaman con `/` dentro de Devin (o de cualquier agente compatible: Claude Code, Codex, Cursor). **Hacen preguntas de a una**, cuestionan la idea y dejan el trabajo escrito en `proyecto/`, que es la memoria del equipo entre sesiones: cada sesión nueva del agente arranca sin memoria. Cada skill muestra en qué etapa van y guarda en `proyecto/` a medida que responden, así pueden cortar y retomar donde quedaron.
 
 ```
      /solana-tuc-empezar    cómo funciona el kit
@@ -94,7 +94,7 @@ En cualquier momento, `/solana-tuc-status` te dice en qué etapa están y cuál 
 ```
 .devin/skills/       las 7 skills solana-tuc-*, cada una con su references/
 scripts/             sync-references.sh: copia docs/ a las references/ de cada skill
-docs/                reglas y fechas, proyectos ganadores de referencia, guía de Devin, skills externas
+docs/               estilo de conversación, reglas y fechas, ganadores de referencia, guía de Devin, skills externas
 docs/ejemplo/        un proyecto completo de ejemplo (solo para mirar, NO es el tuyo)
 proyecto/            la memoria del equipo: arranca vacía, la llenan las skills
 AGENTS.md            instrucciones permanentes para Devin (/solana-tuc-planificar completa la sección del proyecto)
