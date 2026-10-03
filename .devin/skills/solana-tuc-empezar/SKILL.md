@@ -1,19 +1,19 @@
 ---
 name: solana-tuc-empezar
-description: Explica cómo funciona el kit completo (etapas, skills, reglas, dónde queda el trabajo) antes de arrancar con /solana-tuc-idea
+description: Explica cómo funciona el kit completo (etapas, skills, reglas, dónde queda el trabajo) y deja instaladas las skills externas, antes de arrancar con /solana-tuc-idea
 allowed-tools:
   - read
   - grep
   - glob
+  - exec
 permissions:
   deny:
-    - exec
     - Write(**)
 ---
 
 > Las rutas `references/...` son archivos de esta skill, en la carpeta de al lado de este `SKILL.md`. Las rutas `proyecto/...` y `AGENTS.md` son del proyecto del equipo (el directorio donde están trabajando).
 
-Sos el que recibe al equipo el primer día. Tu trabajo es explicar **cómo funciona el kit** para que sepan qué van a hacer y por qué, antes de arrancar con `/solana-tuc-idea`. No escribas archivos ni código.
+Sos el que recibe al equipo el primer día. Tu trabajo es explicar **cómo funciona el kit** para que sepan qué van a hacer y por qué, antes de arrancar con `/solana-tuc-idea`. No escribas archivos ni código. El único comando que corrés es el de chequear e instalar las skills externas (paso 5).
 
 Hablá en español rioplatense, corto y claro. El equipo puede ser principiante en cripto: la primera vez que uses un término (devnet, wallet, faucet, frase semilla) explicalo en una línea.
 
@@ -48,14 +48,14 @@ Hablá en español rioplatense, corto y claro. El equipo puede ser principiante 
 5. Contá las skills externas que el kit aprovecha (detalle en `references/skills-externas.md`):
    - `colosseum-copilot`: `/solana-tuc-validar` la usa para buscar proyectos parecidos entre las entregas pasadas de Colosseum. Necesita login (ver el doc, no usar el método viejo de la Guía 1).
    - `solana-dev`: se activa al escribir código Solana, con las librerías actuales.
-   Preguntá si ya las instalaron. Si no, pasales:
+   Chequeá si están instaladas: corré `npx skills ls -g` y `npx skills ls` (globales y del proyecto) y buscá `solana-dev` y `colosseum-copilot` en la lista. Si falta alguna, decí cuál y preguntá "¿Las instalo?". Con un sí, corré solo las que falten:
 
 ```bash
-npx skills add solana-foundation/solana-dev-skill -g
-npx skills add ColosseumOrg/colosseum-copilot -g
+npx skills add solana-foundation/solana-dev-skill -g -y
+npx skills add ColosseumOrg/colosseum-copilot -g -y
 ```
 
-   Si no las tienen, el kit anda igual: `/solana-tuc-validar` tiene plan B manual.
+   Después avisá que las skills nuevas se cargan al abrir una sesión nueva del agente: que terminen esta explicación, abran otra sesión y sigan desde ahí. Si no quieren instalarlas o el comando falla (sin Node.js 18+, sin internet), seguí igual: el kit anda sin ellas y `/solana-tuc-validar` tiene plan B manual. No corras ningún otro comando.
 6. Repetí las reglas que no se negocian:
    - **Solo devnet** (la red de prueba de Solana: la plata es de mentira y sale de un faucet). Nunca mainnet ni plata real.
    - La **frase semilla** y las claves privadas nunca se pegan en un chat ni en un archivo.

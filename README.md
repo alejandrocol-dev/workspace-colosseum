@@ -21,7 +21,7 @@ Siete skills que se llaman con `/` dentro de Devin. **Hacen preguntas de a una**
 
 | Skill | Qué hace | Archivo que deja |
 |---|---|---|
-| `/solana-tuc-empezar` | Explica cómo funciona todo el kit antes de arrancar (etapas, skills, reglas) | (no escribe) |
+| `/solana-tuc-empezar` | Explica cómo funciona todo el kit antes de arrancar (etapas, skills, reglas) e instala las skills externas que falten | (no escribe) |
 | `/solana-tuc-hackathon` | Te ubica en el proceso y te dice el próximo paso | (no escribe) |
 | `/solana-tuc-idea` | Brainstorm guiado: equipo, problemas, ideas, filtro, elección | `proyecto/01-idea.md` |
 | `/solana-tuc-validar` | Investiga qué ya existe (con Colosseum Copilot si está instalada), ataca la idea y da un veredicto | `proyecto/02-validacion.md` |
@@ -61,12 +61,18 @@ Te explica cómo funciona el kit y te deja listo para `/solana-tuc-idea`. Despu�
 Para tenerlas en cualquier carpeta y en cualquier agente compatible (Devin, Claude Code, Codex, Cursor, etc.):
 
 ```bash
+npx skills add alejandrocol-dev/workspace-colosseum -g
+```
+
+Después abrí el agente en una carpeta vacía y escribí `/solana-tuc-empezar`. Además de explicar el kit, se fija si tenés las dos skills externas que pide la Guía oficial 1 (`solana-dev` y `colosseum-copilot`, ver más abajo) y, si falta alguna, te ofrece instalarla.
+
+Si preferís instalar todo de una desde la terminal:
+
+```bash
 npx skills add solana-foundation/solana-dev-skill -g
 npx skills add ColosseumOrg/colosseum-copilot -g
 npx skills add alejandrocol-dev/workspace-colosseum -g
 ```
-
-Las dos primeras son las skills externas que pide la Guía oficial 1 y que el kit aprovecha (ver más abajo); la tercera es este kit. Después abrí el agente en una carpeta vacía y escribí `/solana-tuc-empezar`.
 
 `-g` las instala globales; sin `-g` quedan solo en el proyecto actual. Para una sola: `--skill solana-tuc-validar`. Cada skill trae en su carpeta `references/` los docs que necesita, así que andan fuera de este repo. El trabajo se sigue guardando en `proyecto/` del directorio donde estén, y `/solana-tuc-planificar` crea el `AGENTS.md` si no existe.
 
